@@ -1,0 +1,1072 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Tourney:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&family=La+Belle+Aurore&family=Stylish&family=Vibur&display=swap');
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    /* text-transform: capitalize !important; */
+    /* font-family: 'Alata', sans-serif; */
+}
+
+
+body{ 
+    background-color: #0D0D0D!important;
+ }
+
+body::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgb(0, 0, 0);
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #97b1e7 !important;
+    outline: 1px solid slategrey;
+}
+
+.typed-cursor {
+    display: none !important;
+}
+
+.big {
+    position: relative;
+    top: 20px;
+    text-transform: uppercase !important;
+    font-size: 60px;
+    z-index: 1 !important;
+    opacity: 0.2 !important;
+    font-family: 'Rubik', sans-serif;
+}
+
+
+.neon {
+    letter-spacing: 4px;
+    display: inline-block;
+    position: relative;
+    filter: brightness(500%);
+
+
+}
+
+.neon::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    right: 0;
+    mix-blend-mode: difference !important;
+    filter: blur(2.5px);
+
+}
+
+/* .neon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #EE6A80, #9D5C6C, #758CB0, #2FAEE2);
+    mix-blend-mode: multiply!important;
+    animation-name:move;
+    animation-duration: 2s;
+    animation-timing-function:linear;
+    animation-fill-mode: both!important;
+    animation-iteration-count: infinite;
+} */
+
+
+
+
+
+/* .coloree{
+    background: linear-gradient(45deg, #f595a0 0%, #31B9E0 100%);
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-align: justify;
+} */
+/* ///////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////// */
+.header {
+    width: 100%;
+    height: auto !important;
+    position: relative;
+    background: linear-gradient(to bottom ,rgba(67, 66, 66, 0.5), hsl(0, 0%, 5%));
+    /* background: linear-gradient(to bottom, gray, black); */
+
+}
+
+.navbar {
+    background-color: transparent;
+    padding: 20px 5px;
+    z-index: 11;
+    position: relative;
+    border-bottom: 1px solid gray;
+
+
+}
+
+.navbar-brand {
+    font-size: 35px;
+    /* font-family: 'Tourney', cursive; */
+    font-weight: 500;
+    color: #fff !important;
+}
+
+.navbar-brand span {
+    color: #F8D8DC;
+}
+
+.nav-link {
+    text-transform: uppercase !important;
+    font-size: 18px;
+    margin: 5px;
+    color: #CCCCCC !important;
+    font-weight: 500;
+    transition: all 0.1s ease;
+    box-sizing: border-box;
+}
+
+
+/* .nav-link:hover {
+    color: #EFAEB6 !important;
+    transition: 0.5s;
+} */
+
+/* ////////////////////// */
+/* nav.sticky {
+    background-color: #000 !important;
+    color: white !important;
+    transition: 0.5s !important;
+    z-index: 1111;
+    opacity: 1 !important;
+    padding: 0px 15px !important;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: all 0.5 ease-in-out;
+} */
+
+/* nav.sticky .navbar-brand,
+nav.sticky .navbar-brand span{
+    font-size: 30px!important;
+    color: #EFAEB6!important;
+
+} */
+/* nav.sticky .navbar-brand img {
+    width: 150px;
+    height: 50px;
+    transition: all 0.5 ease-in-out;
+}
+
+nav.sticky .nav-link.active {
+    color: #EFAEB6 !important;
+}
+
+nav.sticky .nav-link {
+    color: #EFAEB6 !important;
+    font-size: 15px !important;
+}
+
+nav.sticky .butn1 {
+    background-color: #EFAEB6;
+    border: 1px solid #EFAEB6;
+}
+
+nav.sticky .butn1:hover {
+    background-color: transparent;
+    border: 1px solid #EFAEB6;
+    color: #fff;
+
+} */
+
+/* //////////////////////*/
+.welcomediv {
+    color: white;
+    margin-top: 180px;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) !important; */
+
+}
+
+.welcomediv h1 {
+    font-size: 90px;
+
+    /* font-family: 'Rubik', sans-serif; */
+    letter-spacing: 2px;
+    color: #CCCCCC;
+    font-weight: 600;
+}
+
+.welcomediv h3 {
+    letter-spacing: 5px;
+    color: #fff;
+    background-color: #8f666b;
+    display: inline;
+    font-weight: 400;
+    font-family: 'Tourney', cursive;
+
+}
+
+.welcomediv p {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    color: #7D7F78;
+
+
+}
+
+        /* Button container styling */
+        .book-now-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 20px 30px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: none !important; 
+            border-radius: 50px; /* Creates the half-circle look */
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Hover effect for background color change */
+        .book-now-btn:hover {
+            background-color: #B663D4; /* Purple background on hover */
+        }
+
+        /* Styling for the circle with arrow inside */
+        .circleDiv {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            color: #000;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: transform 0.3s ease;
+            
+        }
+
+        /* Text styling */
+        .text {
+            color: #fff;
+            transition: transform 0.3s ease;
+            font-weight: 200;
+        }
+
+        /* Swapping effect */
+        .book-now-btn:hover .circleDiv {
+            transform: translateX(80px); /* Move arrow right on hover */
+        }
+
+        .book-now-btn:hover .text {
+            transform: translateX(-45px); /* Move text left on hover */
+        }
+
+
+
+/* /////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////// */
+
+.About {
+    width: 100% ;
+    height: auto;
+    position: relative;
+}
+
+.about-inner {
+    width: 100%;
+    margin-top: 80px;
+
+}
+
+.text h5 {
+    font-size: 20px;
+    color: #494A46;
+    font-weight: 400;
+}
+.text h5 span{
+    color: #B663D4;
+}
+.text h1 {
+    font-size: 75px;
+    color: #CCCCCC;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.text h6 {
+    letter-spacing:1px;
+    color: #A6A6A6;
+    font-size: 14px;
+
+}
+.ArrowIcon{
+    width: 10px;
+    height: auto;
+    background-color: #B663D4;
+    text-align: center;
+}
+
+.PersonInAbout p{
+    font-size: 14px;
+    color:#CCCCCC;
+}
+
+.PersonInAbout small{
+    font-size: 14px;
+    color:#7F7F7F;
+}
+
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+.services {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.service-card {
+    background: linear-gradient(to bottom right, black, black, #221825); /* Initial gradient from top right to bottom left */
+    transition: background 0.5s ease; /* Smooth transition for gradient swap */
+    border-radius: 20px;
+  }
+  
+  .service-card2 {
+    background: linear-gradient(to bottom left, black, black, #221825); /* Initial gradient from top right to bottom left */
+    transition: background 0.5s ease; /* Smooth transition for gradient swap */
+    border-radius: 20px;
+  }
+
+  .service-card3 {
+    background: linear-gradient(to top right, black, black, #221825); /* Initial gradient from top right to bottom left */
+    transition: background 0.5s ease; /* Smooth transition for gradient swap */
+    border-radius: 20px;
+  }
+
+
+  .service-card4 {
+    background: linear-gradient(to top left, black, black, #221825); /* Initial gradient from top right to bottom left */
+    transition: background 0.5s ease; /* Smooth transition for gradient swap */
+    border-radius: 20px;
+  }
+
+
+  .service-card:hover {
+    background: linear-gradient(to bottom right, black, #19141c, #4C2F57); /* Hover gradient with new color */
+  }
+
+  .service-card2:hover {
+    background: linear-gradient(to bottom left, black, #19141c, #4C2F57); /* Hover gradient with new color */
+  }
+
+  .service-card3:hover {
+    background: linear-gradient(to top right, black, #19141c, #4C2F57); /* Hover gradient with new color */
+  }
+
+  .service-card4:hover {
+    background: linear-gradient(to top left, black, #19141c, #4C2F57); /* Hover gradient with new color */
+  }
+  
+
+  .text-section h2 {
+    color: #CCCCCC !important;
+    font-size: 26px;
+  }
+
+  
+  .text-section p {
+    color: #7F7F7F !important;
+    font-size: 18px;
+  }
+  
+  /* .service-card2 .text-section p {
+    color: #7F7F7F !important;
+    font-size: 20px;
+  } */
+  /* .image-section img {
+    width: 100%;
+    border-radius: 10px;
+  } */
+  
+
+
+
+/* /////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////// */
+.WhyChooseUs {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+/* Container styling with custom borders in top-right and bottom-left corners */
+.Box-container {
+    position: relative;
+    background-color: #212121;
+    color: #e0e0e0;
+    text-align: center;
+    border-radius: 0px;
+    max-width: 100%;
+  }
+  
+  .Box-container::before,
+  .Box-container::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #4C2F57;
+  }
+  
+  .Box-container::before {
+    top: 0;
+    right: 0;
+    border-width: 2px 2px 0 0;
+  }
+  
+  .Box-container::after {
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 2px 2px;
+  }
+  
+  /* Icon box styling with gradient */
+  .icon-box {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(to bottom left, #212121 ,#212121 ,#4C2F57 ,#4C2F57 , #4C2F57);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #1F1F1F;
+  }
+  
+  .fa-star,
+  .fa-fast-forward {
+    font-size: 30px;
+  }
+  
+  /* Title and description styling */
+  .Box-title {
+    font-size: 26px;
+    color: #CCCCCC;
+  }
+  
+  .Box-description {
+    font-size: 19px;
+    color: #7A7A7A;
+  }
+
+  
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////// */
+
+.Team {
+    width: 100%;
+    height: auto;
+}
+
+.above-artist h2 {
+    color: #f595a0;
+    font-family: 'Gaegu', cursive;
+    background: url("../images/download\ \(5\).webp") no-repeat center;
+    background-size: contain;
+
+}
+
+.above-artist p {
+    color: #888888;
+    font-family: 'Gaegu', cursive;
+}
+.artisit-person {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.artisit-person img {
+    width: 100%;
+    height: auto;
+    border-radius:20px;
+    position: relative;
+}
+
+.artisit-person .Text-data {
+    position: absolute;
+    color: #000;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%); /* لتحريك النص إلى منتصف العرض */
+    text-align: center;
+}
+
+
+.artisit-person  .Text-data h3{
+    font-size: 18px;
+    color: #050B20;
+}
+
+.artisit-person  .Text-data p{
+    font-size: 16px;
+    color: #050B20;
+}
+  
+
+
+
+
+/* ////////////////////////////////////////////////////////// */
+
+.WorkCard {
+    border-radius: 20px !important;
+    background-color: #131313;
+    padding: 20px 30px !important;
+}
+
+.img-container img{
+    border-radius: 22px !important;
+    height: 250px;
+}
+.WorkCard h5{ 
+   font-size: 20px;
+   color: #7D7F78; 
+}
+
+.WorkCard h3{ 
+    font-size: 26px;
+    color: #CCCCCC; 
+ }
+
+ .WorkCard h6{ 
+    font-size: 16px;
+    color: #7A7A7A; 
+    font-weight: 600;
+ }
+.works-links {
+    display: flex;
+    padding-bottom: 0px !important;
+    background: #000;
+    overflow:scroll;
+    /* gap:     ; */
+    /* border-bottom: 1px solid #CCCCCC !important;  */
+
+  }
+
+  .work-link {
+    text-decoration: none;
+    font-size: 25px;
+    color: #CCCCCC;
+    position: relative;
+    padding-left: 20px !important;
+    padding-bottom: 20px !important;
+    text-align: right !important; 
+    /* background-color: red; */
+    display: inline;
+    border-bottom: 1px solid #CCCCCC; 
+  }
+  
+  .work-link::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: transparent;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    transition: background-color 0.3s, width 0.3s;
+  }
+  
+  .work-link:hover {
+    color: #CCCCCC;
+  }
+  
+  
+  
+  .work-link:focus {
+    color: #c376df;
+  }
+  
+  .work-link:focus::after {
+    background-color: #c376df;
+    width: 100%;
+  }
+  
+
+  .circleSlider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #262626;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+  }
+  .circleSlider .fa-arrow-left,
+  .circleSlider .fa-arrow-right{
+    color: #fff !important;
+
+  }
+
+
+  .owl-prev,
+  .owl-next{
+      direction: ltr;
+      /* position: absolute; */
+      background-color: transparent !important;
+      position: relative;
+  }
+  
+  
+  .owl-prev span,
+  .owl-next span{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 50px;
+      background-color:#00A651;
+      color: white;
+      line-height: 44px;
+      position: absolute;
+      
+  }
+  
+  .owl-next{
+      top: 80%;
+      left: 20%;
+  }
+  
+  .owl-prev{
+      top: 80%;
+      right: 90%;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* /////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////// */
+.testemonials {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background: linear-gradient(rgba(255, 210, 219, 0.7), rgba(255, 210, 219, 0.7));
+}
+
+.teste-main {
+    margin-top: 80px !important;
+    position: relative;
+}
+
+.teste-data img {
+    border-radius: 50%;
+}
+
+.teste-data p {
+    font-size: 20px;
+    font-family: 'Gaegu', cursive;
+    color: #000;
+}
+
+.teste-data p.span {
+    font-size: 25px;
+}
+
+.Teste-img {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50px;
+    top: -50px;
+    z-index: -1;
+}
+
+/* /////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////// */
+
+.FAQS {
+    width: 100%;
+    height: auto;
+    position: relative;
+    /* margin-top: 80px !important; */
+    background-color: transparent;
+    background: url("../images/6.webp") no-repeat center;
+    background-size: cover;
+}
+
+.FAQS .card {
+    background-color: transparent;
+    border-radius: 0px;
+    border-left: 5px solid #f15063 !important;
+}
+
+.faqs-span {
+    font-family: 'Stylish', sans-serif;
+    font-size: 22px;
+    color: #f15063;
+}
+
+.rotate-icon {
+    font-size: 22px;
+    color: #f15063;
+}
+
+.faqs-p {
+    font-family: 'Gaegu', cursive;
+    font-size: 19px;
+    color: #888
+}
+
+/* /////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////// */
+
+footer {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.footer-brand {
+    font-family: 'Graduate', cursive !important;
+}
+
+footer h2 {
+    text-align: left;
+    text-decoration-line: none;
+}
+
+footer h5 {
+    color: #fff !important;
+    font-size: 25px;
+}
+
+footer p {
+    color: #f0d9dc !important;
+}
+
+.context-dark,
+.bg-gray-dark,
+.bg-primary {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-classic a,
+.footer-classic a:focus,
+.footer-classic a:active {
+    color: #f0d9dc !important;
+}
+
+.nav-list li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.nav-list li a:hover:before {
+    margin-left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.contact_data dt,
+.contact_data dd {
+    color: #f0d9dc !important;
+
+}
+
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.social {
+    font-size: 25px;
+
+}
+
+.footerinput {
+    width: 75%;
+    height: 50px;
+    background-color: transparent;
+    padding: 15px;
+    outline: none;
+    border: 1px solid #EFAEB6;
+
+}
+
+.footerinput::placeholder {
+    font-size: 13px;
+    color: #f0d9dc;
+}
+
+.butn5 {
+    width: 60px;
+    height: 50px;
+    background-color: transparent;
+    margin-left: -5px;
+    border-radius: 2px;
+    border: 1px solid #EFAEB6;
+}
+
+/* todo  /////////////////////////////////////////////////////////  other pages  /////////////////////////////////////////////////////////////////////////// */
+/* todo  /////////////////////////////////////////////////////////  other pages  /////////////////////////////////////////////////////////////////////////// */
+/* todo  /////////////////////////////////////////////////////////  other pages  /////////////////////////////////////////////////////////////////////////// */
+/* todo  /////////////////////////////////////////////////////////  other pages  /////////////////////////////////////////////////////////////////////////// */
+/* todo  /////////////////////////////////////////////////////////  other pages  /////////////////////////////////////////////////////////////////////////// */
+/* todo  /////////////////////////////////////////////////////////  other pages  /////////////////////////////////////////////////////////////////////////// */
+/* todo  /////////////////////////////////////////////////////////  other pages  /////////////////////////////////////////////////////////////////////////// */
+/* todo  /////////////////////////////////////////////////////////  other pages  /////////////////////////////////////////////////////////////////////////// */
+/* todo  /////////////////////////////////////////////////////////  other pages  /////////////////////////////////////////////////////////////////////////// */
+
+.loginSection {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.signupSection {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.MainLogin {
+    height: auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+
+}
+
+.MainLogin h3 {
+    color: #EFAEB6 !important;
+    font-family: 'Gaegu', cursive;
+}
+
+.MainLogin p {
+    color: #EFAEB6;
+    font-family: 'Gaegu', cursive;
+}
+
+.MainLogin form input {
+    background-color: transparent !important;
+    color: #fff;
+    border: 1.7px solid #EFAEB6 !important;
+}
+
+.MainLogin form input:focus {
+    color: #fff;
+}
+
+.MainLogin form input::placeholder {
+    color: #EFAEB6;
+}
+
+.targetLink {
+    font-family: 'Stylish', sans-serif;
+    color: #f15063;
+    font-size: 19px;
+}
+
+
+
+
+.Profile-header .welcomediv {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/banners/profile.jpg") no-repeat center fixed;
+    background-size: cover;
+
+}
+
+/* .Profile-header .welcomediv {
+    margin-top: 100px;
+
+} */
+
+
+.welcomediv .profile-img {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    border: 10px solid #F49EB7;
+    transition: 0.5s;
+    transform: scale(1);
+ 
+
+}
+
+
+
+.welcomediv .profile-img:hover {
+    transition: 0.5s;
+    transform: scale(1.0800);
+}
+
+
+
+
+
+/* //////////////////////   responsive   //////////////////// */
+/* //////////////////////   responsive   //////////////////// */
+/* //////////////////////   responsive   //////////////////// */
+/* //////////////////////   responsive   //////////////////// */
+
+@media screen and (max-width: 1199px) {
+
+    .nav-link {
+        font-size: 17px !important;
+        font-weight: 400 !important;
+    }
+
+    .welcomediv .personal-photo img {
+        width: 250px;
+        height: 250px;
+    }
+
+
+    .about-data {
+        display: block !important;
+        margin: 0px;
+    }
+
+}
+
+
+@media screen and (max-width: 991px) {
+    .navbar {
+        background-color: black;
+        padding: 20px 20px;
+        background-color: black;
+        padding: 0px 5px !important;
+    }
+
+    .navbar .nav-link {
+        padding: none !important;
+    }
+
+    .welcomediv {
+    }
+
+    .welcomediv .personal-photo img {
+     
+    }
+
+    .welcomediv h1 {
+        font-size: 40px;
+    }
+
+    .welcomediv h3 {
+    }
+
+    .welcomediv p {
+        font-size: 19px;
+    }
+    .about-inner .text h5{
+        font-size: 19px;
+    }
+    .about-inner .text h1{
+        font-size: 40px;
+    }
+    .sectiontitle h1{
+        font-size: 40px !important;
+    }
+    .works-links{
+        /* overflow: scroll; */
+        /* overflow-y: hidden;
+        overflow-x: scroll; */
+    }
+    .work-link{
+        font-size: 18px;
+    }
+    .icon-box{
+        width: 50px;
+        height: 50px;
+    }
+    .Box-title{
+        font-size: 22px;
+    }
+    .Box-description{
+        font-size: 16px;
+
+    }
+    .PCscreen{
+        display: none;
+    }
+    .mobileScreen{
+        display:block !important;
+    }
+
+    /* ? ///////////////////////////////////// */
+    .signupSection {
+        height: 100% !important;
+    }
+
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .title-text::after {
+        top: 120px;
+    }
+
+}
+
+
+@media screen and (max-width: 575px) {}
+
+@media screen and (max-width: 362px) {}
