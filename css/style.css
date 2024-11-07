@@ -102,7 +102,7 @@ body::-webkit-scrollbar-thumb {
 /* ///////////////////////////////////////////////////////// */
 .header {
     width: 100%;
-    height: auto !important;
+    height:  100vh!important;
     position: relative;
     background: linear-gradient(to bottom ,rgba(67, 66, 66, 0.5), hsl(0, 0%, 5%));
     /* background: linear-gradient(to bottom, gray, black); */
@@ -694,7 +694,6 @@ nav.sticky .butn1:hover {
     width: 100%;
     height: auto;
     position: relative;
-    background: linear-gradient(rgba(255, 210, 219, 0.7), rgba(255, 210, 219, 0.7));
 }
 
 .teste-main {
@@ -706,24 +705,93 @@ nav.sticky .butn1:hover {
     border-radius: 50%;
 }
 
-.teste-data p {
-    font-size: 20px;
-    font-family: 'Gaegu', cursive;
-    color: #000;
+.teste-inner h2 {
+    font-size: 38px !important;
+    /* font-family: 'Gaegu', cursive; */
+    color: #B663D4;
 }
 
-.teste-data p.span {
-    font-size: 25px;
+
+.testeimg-circle {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    background: url("../images/persons/TesteemonialsPerson.jpg") , no-repeat center center ; background-size: cover;
 }
 
-.Teste-img {
-    width: 200px;
-    height: 200px;
+.teste-person h5{
+    font-size: 20px !important;
+    color: #CCCCCC;
+}
+
+.teste-person h6{
+    font-size: 16px !important;
+    color: #7A7A7A;
+}
+
+.DotButtons_teste .circleSliderButton{
+    width: 45px;
+    height: 45px;
+    margin: 5px;
+    background-color:transparent !important;
+    border: 3px solid #868F98 !important; 
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+  .DotButtons_teste .circleSliderButton .fa-arrow-left,
+  .DotButtons_teste .circleSliderButton .fa-arrow-right{
+    color: #868F98 !important;
+
+  }
+
+
+  .swaped_images {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.image-stack {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+}
+
+.image-stack img {
     position: absolute;
-    left: 50px;
-    top: -50px;
-    z-index: -1;
+    width: 100%;
+    height: 450px; /* الطول الثابت للصور */
+    object-fit: cover; /* الحفاظ على نسبة العرض إلى الارتفاع */
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+
 }
+.image-stack img.active {
+   
+    border: 1px solid #fff !important; 
+
+}
+
+.img-1 {
+    top: 0;
+    transform: rotate(0deg);
+    z-index: 3;
+}
+
+.img-2 {
+    top: 20px;
+    transform: rotate(5deg);
+    z-index: 2;
+}
+
+.img-3 {
+    top: 40px;
+    transform: rotate(10deg);
+    z-index: 1;
+}
+
 
 /* /////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////// */
@@ -987,6 +1055,9 @@ ol {
 
 
 @media screen and (max-width: 991px) {
+    .header{
+        height: auto !important;
+    }
     .navbar {
         background-color: black;
         padding: 20px 20px;

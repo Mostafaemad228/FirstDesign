@@ -55,7 +55,7 @@
         <div class="collapse navbar-collapse " id="ftco-nav">
             <ul data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" class="navbar-nav m-auto ml-auto">
                 <li class="nav-item active mt-3 "><a href="index.html" class="nav-link active">  Home</a></li>
-                <li class="nav-item mt-3"><a href="#About" class="nav-link">  about</a></li>
+                <!-- <li class="nav-item mt-3"><a href="#About" class="nav-link">  about</a></li> -->
                 <li class="nav-item mt-3"><a href="#Service" class="nav-link">  Service</a></li>
                 <li class="nav-item mt-3"><a href="#Contact_us" class="nav-link">  Contact us</a></li>
                 <li class="nav-item mt-3">
@@ -513,6 +513,65 @@
 <!-- ???????????????????????????????????! Warranty  ?????????????????????????????????? -->
 <!-- ???????????????????????????????????! Warranty  ?????????????????????????????????? -->
 
+<!-- ???????????????????????????????????! testemonials  ?????????????????????????????????? -->
+<!-- ???????????????????????????????????! testemonials  ?????????????????????????????????? -->
+<section class="testemonials pb-5"   data-vide-bg="images\video\2.mp4" id="testemonials">
+    <div class="container-fluid">
+        <div class="row mt-5">
+            <div class=" text-center col-lg-12 ">
+                <div style="margin-top: 80px!important;" class="col-lg-9 m-auto sectiontitle">
+                    <h1 style="font-size: 54px;color:#CCCCCC">  testimonials</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid teste-main">
+        <div class="col-11 m-auto">
+            <div class="row teste-inner">
+                <div class="col-lg-6 p-2">
+                    <div class="text p-5">
+                        <img src="images/quote.webp" class="img-fluid" width="80px" alt="">
+                        <h2 class="heading" >Rarely do I pause to comment  <br> on tools, but in my role as a  <br>"photographer", this app truly <br> stands out. Love it!</h2>
+                
+                        <div class="mt-5 d-flex teste-person active">
+                            <div class="testeimg-circle text-center" style="background: url(../images/persons/TesteemonialsPerson.jpg) , no-repeat center center ; background-size: cover;                            "> </div>
+                
+                            <div class="ml-3">
+                                <h5>James Anderson</h5>
+                                <h6>Director of Operations, Moatable inc.</h6>
+                            </div>
+                        </div>  
+                
+                        <div class="DotButtons_teste d-flex mt-5 pl-2">
+                            <!-- Previous Button -->
+                            <div class=" circleSliderButton  circleSlider-prev text-center pt-1 pb-1">
+                                <i class="fas fa-arrow-left text-dark mt-2"></i>
+                            </div>
+                            <!-- Next Button -->
+                            <div class="circleSliderButton circleSlider text-center pt-1 pb-1">
+                                <i class="fas fa-arrow-right text-dark"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <!-- Image Stack Section -->
+                <div class="col-lg-5 ml-auto swaped_images">
+                    <div class="image-stack">
+                        <img class="img-fluid img-1" src="images/testemonials_photo (1).jpg" alt="image1">
+                        <img class="img-fluid img-2" src="images/testemonials_photo (1).png" alt="image2">
+                        <img class="img-fluid img-3" src="images/testemonials_photo (2).jpg" alt="image3">
+                    </div>
+                </div>
+                                  
+                 <!-- ? ////////////////////////////////////////////////////////////////////// -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ???????????????????????????????????! testemonials  ?????????????????????????????????? -->
+<!-- ???????????????????????????????????! testemonials  ?????????????????????????????????? -->
 
 
 
@@ -613,6 +672,77 @@
 <script src="js/custom.js"></script>
 
 <script>
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll(".image-stack img");
+    const nextButton = document.querySelector(".DotButtons_teste .circleSlider");
+    const prevButton = document.querySelector(".DotButtons_teste .circleSlider-prev");
+    const heading = document.querySelector(".teste-inner .text h2");
+    const personName = document.querySelector(".teste-person h5");
+    const personCompany = document.querySelector(".teste-person h6");
+    const testeimgCircle = document.querySelector(".testeimg-circle");
+
+    const texts = [
+        "Rarely do I pause to comment  <br> on tools, but in my role as a  <br>'photographer', this app truly <br> stands out. Love it!",
+        "Hardly ever jot down reviews, but this software, crucial for my work as an 'engineer', merits one.",
+        "Don't often take time to write reviews of apps, but this one is so deserving in my line of work as a 'Driver'."
+    ];
+
+    const personDetails = [
+        { name: "Fofana Anderson", company: "Moatable inc." },
+        { name: "Ramsis Anderson", company: "Moatable inc." },
+        { name: "G V", company: "Moatable inc." }
+    ];
+
+    const imageUrls = [
+        "../images/persons/TesteemonialsPerson.jpg",
+        "../images/persons/TesteemonialsPerson2.png",
+        "../images/persons/TesteemonialsPerson3.png"
+    ];
+
+    let currentIndex = 0;
+
+    function updateImageStack() {
+        // Reset all image classes
+        images.forEach(img => img.classList.remove("img-1", "img-2", "img-3"));
+
+        // Set classes for each image based on the new index
+        images[currentIndex].classList.add("img-1");
+        images[(currentIndex + 1) % images.length].classList.add("img-2");
+        images[(currentIndex + 2) % images.length].classList.add("img-3");
+
+        // Update the text content based on the current index
+        heading.innerHTML = texts[currentIndex];
+
+        // Update the person's details based on the current index
+        personName.textContent = personDetails[currentIndex].name;
+        personCompany.textContent = personDetails[currentIndex].company;
+
+        // Update the background image of .testeimg-circle based on the current index
+        testeimgCircle.style.background = `url(${imageUrls[currentIndex]}) no-repeat center center`;
+        testeimgCircle.style.backgroundSize = "cover";
+    }
+
+    nextButton.addEventListener("click", function () {
+        // Move to the next image
+        currentIndex = (currentIndex + 1) % images.length;
+        updateImageStack();
+    });
+
+    prevButton.addEventListener("click", function () {
+        // Move to the previous image
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateImageStack();
+    });
+
+    // Initialize the image stack and text on load
+    updateImageStack();
+});
+
+
 
 
 
