@@ -126,7 +126,9 @@
                 </div>
             <!-- ? ////////////////////////////////////////////////////////////////////// -->
                 <div class="col-lg-7">
-                    <img class="img-fluid"  src="images/banners/aboutPhoto.png" alt="">
+                    <div class="Aboutimage-container">
+                        <img class="img-fluid"  src="images/banners/aboutPhoto.png" alt="">
+                    </div>
                 </div>
             <!-- ? ////////////////////////////////////////////////////////////////////// -->
         </div>
@@ -249,7 +251,7 @@
 
     <div class="container-fluid mt-5">
         <div class="col-12 m-auto">
-            <div class="works-links p-5 overflow-hidden">
+            <div class="works-links p-5 overflow-x-auto flex space-x-4">
                 <a href="#carwash" class="work-link">Car wash</a>
                 <a href="#carwrap" class="work-link">Car Wrab</a>
                 <a href="#ppf" class="work-link">Paint Protection Film (PPF)</a>
@@ -515,8 +517,8 @@
 
 <!-- ???????????????????????????????????! testemonials  ?????????????????????????????????? -->
 <!-- ???????????????????????????????????! testemonials  ?????????????????????????????????? -->
-<section class="testemonials pb-5"   data-vide-bg="images\video\2.mp4" id="testemonials">
-    <div class="container-fluid">
+<section class="testemonials pb-5 pt-5"  id="testemonials">
+    <div class="container">
         <div class="row mt-5">
             <div class=" text-center col-lg-12 ">
                 <div style="margin-top: 80px!important;" class="col-lg-9 m-auto sectiontitle">
@@ -525,11 +527,11 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid teste-main">
-        <div class="col-11 m-auto">
+    <div class="container-fluid mt-5">
+        <div class="col-11 m-auto ">
             <div class="row teste-inner">
-                <div class="col-lg-6 p-2">
-                    <div class="text p-5">
+                <div class="col-lg-6  position-relative TestetextPart">
+                    <div class="text p-4">
                         <img src="images/quote.webp" class="img-fluid" width="80px" alt="">
                         <h2 class="heading" >Rarely do I pause to comment  <br> on tools, but in my role as a  <br>"photographer", this app truly <br> stands out. Love it!</h2>
                 
@@ -542,7 +544,7 @@
                             </div>
                         </div>  
                 
-                        <div class="DotButtons_teste d-flex mt-5 pl-2">
+                        <div class="DotButtons_teste d-flex mt-5 pl-2 ">
                             <!-- Previous Button -->
                             <div class=" circleSliderButton  circleSlider-prev text-center pt-1 pb-1">
                                 <i class="fas fa-arrow-left text-dark mt-2"></i>
@@ -557,13 +559,14 @@
                 
                 
                 <!-- Image Stack Section -->
-                <div class="col-lg-5 ml-auto swaped_images">
+                <div class="col-lg-5 ml-auto swaped_images mt-5">
                     <div class="image-stack">
-                        <img class="img-fluid img-1" src="images/testemonials_photo (1).jpg" alt="image1">
-                        <img class="img-fluid img-2" src="images/testemonials_photo (1).png" alt="image2">
-                        <img class="img-fluid img-3" src="images/testemonials_photo (2).jpg" alt="image3">
+                        <img class="img-fluid img-1 position-absolute" src="images/testemonials_photo (1).jpg" alt="image1">
+                        <img class="img-fluid img-2 position-absolute" src="images/testemonials_photo (1).png" alt="image2">
+                        <img class="img-fluid img-3 position-absolute" src="images/testemonials_photo (2).jpg" alt="image3">
                     </div>
                 </div>
+                
                                   
                  <!-- ? ////////////////////////////////////////////////////////////////////// -->
             </div>
@@ -579,7 +582,7 @@
 
 <!-- ???????????????????????????????????! contact  ?????????????????????????????????? -->
 <!-- ???????????????????????????????????! contact  ?????????????????????????????????? -->
-<footer id="footer" class="pt-4 section footer-classic context-dark bg-image p-5" data-vide-bg="images\video\3.mp4" >
+<footer id="footer" class="pt-4 section footer-classic context-dark  p-5" data-vide-bg="images\video\3.mp4" >
     
     <div class="container">
       <div class="row row-30">
@@ -595,20 +598,41 @@
             <h5 class="mt-4">Phone : +01 23456789</h5>
 
             <div class="row p-2 pb-0">
-                <span class="mr-auto mr-3" class="socials">
-                  <a target="_blank" href="#"><i class=" footerSocialIcon mt-3 m-1 fab fa-twitter"></i></a>
-                  <a target="_blank" href="#"><i class=" footerSocialIcon mt-3 m-1 fab fa-facebook"></i></a>
-                  <a target="_blank" href="#"><i class=" footerSocialIcon mt-3 m-1 fab fa-google-plus"></i></a>
-                  <a target="_blank" href="#"><i class=" footerSocialIcon mt-3 m-1 fab fa-pinterest"></i></a>
-                  <a target="_blank" href="#"><i class=" footerSocialIcon mt-3 m-1 fab fa-dribbble"></i></a>
+                <span class="mr-auto mr-3 row" class="socials">
+                  <div class="footerSocialIcon text-center instagram">
+                      <a target="_blank" href="#"><i class="MediaIcon  mt-3 m-1 fab fa-instagram"></i></a>
+                      <i class="MediaIcon2  mt-3 m-1 fab fa-instagram "></i>
+                  </div>
+                  <div class="footerSocialIcon text-center whatsapp">
+                      <a target="_blank" href="#"><i class="MediaIcon  mt-3 m-1 fab fa-whatsapp"></i></a>
+                      <i class="MediaIcon2  mt-3 m-1 fab fa-whatsapp "></i>
+                  </div>
+                  <div class="footerSocialIcon  text-center facebook">
+                      <a target="_blank" href="#"><i class="MediaIcon  mt-3 m-1 fab fa-facebook"></i></a>
+                      <i class="MediaIcon2  mt-3 m-1 fab fa-facebook "></i>
+                  </div>
+                  <div class="footerSocialIcon text-center tiktok">
+                      <a target="_blank" href="#"><i class="MediaIcon  mt-3 m-1 fab fa-tiktok"></i></a>
+                      <i class="MediaIcon2  mt-3 m-1 fab fa-tiktok "></i>
+                  </div>
         
                 </span>
               </div>
           </div>
         </div>
+
+
+
+
+        
+    <!-- /////////////////////////////// -->
+    <div class="col-lg-2 col-md-6 col-sm-12 text-center mt-5 ">  </div>
+    <!-- //////////////////////////// -->
+
+    
       <!-- /////////////////////////////// -->
-        <div class="col-lg-3 col-md-6 col-sm-12 text-center mt-5 ">
-          <h5 style="color: #ae66f1;">Quick Links</h5>
+        <div class="col-lg-3 col-md-6 col-sm-12 text-center ">
+          <h5 style="color: #ae66f1 !important;">Quick Links</h5>
           <ul class="nav-list ">
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
@@ -622,9 +646,11 @@
 
           
       
-           <!-- /////////////////////////////// -->
-        <div class="col-lg-3 col-md-6 col-sm-12 text-center mt-5 ">
-            <h5 style="color: #ae66f1;">Resources </h5>
+   
+
+              <!-- /////////////////////////////// -->
+        <div class="col-lg-3 col-md-6 col-sm-12 text-center ">
+            <h5 style="color: #ae66f1 !important;">Resources </h5>
             <ul class="nav-list ">
               <li><a href="#">Support</a></li>
               <li><a href="#">Privacy Policy</a></li>
@@ -692,9 +718,9 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     const personDetails = [
-        { name: "Fofana Anderson", company: "Moatable inc." },
-        { name: "Ramsis Anderson", company: "Moatable inc." },
-        { name: "G V", company: "Moatable inc." }
+        { name: "James Anderson", company: "Director of Operations, Moatable inc." },
+        { name: "Boyce Chi", company: "UX Designer, Moatable inc." },
+        { name: "Olivia Johnson", company: "Dispatch Manager, Trucker King Inc." }
     ];
 
     const imageUrls = [
@@ -707,7 +733,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateImageStack() {
         // Reset all image classes
-        images.forEach(img => img.classList.remove("img-1", "img-2", "img-3"));
+        images.forEach(img => img.classList.remove("img-1", "img-2", "img-3", "move-right", "move-left"));
 
         // Set classes for each image based on the new index
         images[currentIndex].classList.add("img-1");
@@ -727,21 +753,32 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     nextButton.addEventListener("click", function () {
-        // Move to the next image
-        currentIndex = (currentIndex + 1) % images.length;
-        updateImageStack();
+        // Apply the move-right class to the img-2 image
+        const img2 = images[(currentIndex + 1) % images.length];
+        img2.classList.add("move-right");
+
+        // After 1 second (the duration of the animation), shift the images
+        setTimeout(() => {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateImageStack();
+        }, 1000); // 1 second delay to allow the move to complete
     });
 
     prevButton.addEventListener("click", function () {
-        // Move to the previous image
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        updateImageStack();
+        // Apply the move-left class to the img-3 image
+        const img3 = images[(currentIndex + 2) % images.length];
+        img3.classList.add("move-left");
+
+        // After 1 second (the duration of the animation), shift the images
+        setTimeout(() => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateImageStack();
+        }, 1000); // 1 second delay to allow the move to complete
     });
 
     // Initialize the image stack and text on load
     updateImageStack();
 });
-
 
 
 

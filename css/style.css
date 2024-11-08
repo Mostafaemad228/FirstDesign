@@ -19,6 +19,7 @@ html {
 
 body{ 
     background-color: #0D0D0D!important;
+    position: relative !important;
  }
 
 body::-webkit-scrollbar {
@@ -338,6 +339,64 @@ nav.sticky .butn1:hover {
     color:#7F7F7F;
 }
 
+
+/* .Aboutimage-container {
+    perspective: 2000px; 
+    border-radius: 8px;
+    
+}
+
+.Aboutimage-container img {
+    width: 80%;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    transform-origin: bottom right; 
+}
+
+.Aboutimage-container:hover img {
+    transform: rotateY(-10deg) rotateX(5deg) skewX(-2deg); 
+    filter: brightness(80%); 
+    transform-origin: bottom  left , top  right ; 
+} */
+
+
+
+
+.Aboutimage-container {
+    perspective: 2000px; /* إضافة منظور لتأثير 3D */
+    border-radius: 8px;
+}
+
+.Aboutimage-container img {
+    width: 80%;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+@keyframes rotateImage {
+    0% {
+        transform-origin: bottom right; /* التحديد من أسفل اليسار */
+        transform: rotateY(0deg) rotateX(0deg) skewX(0deg);
+    }
+    50% {
+        transform-origin: top right; /* التحديد من أعلى اليمين */
+        transform: rotateY(-8deg) rotateX(7deg) ;
+    }
+    50% {
+        transform-origin: bottom left; /* العودة إلى أسفل اليسار */
+        transform: rotateY(-8deg) rotateX(7deg) ;
+    }
+    100% {
+        transform-origin: bottom right; /* العودة إلى أسفل اليسار */
+        transform: rotateY(8deg) rotateX(-7deg) skewX(-2deg);
+    }
+}
+
+.Aboutimage-container:hover img {
+    animation-play-state:running; /* إيقاف الحركة عند التمرير */
+    transform: rotateY(-15deg) rotateX(5deg) skewX(-2deg); /* تأثير مخصص عند التمرير */
+    filter: brightness(80%);
+    animation: rotateImage 2s infinite alternate; /* الحركة تتكرر وتتبدل بين الاتجاهين */
+
+}
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////// */
@@ -574,12 +633,27 @@ nav.sticky .butn1:hover {
 .works-links {
     display: flex;
     padding-bottom: 0px !important;
-    background: #000;
-    overflow:scroll;
+    /* background: #000; */
+    overflow-x:scroll !important;
     /* gap:     ; */
     /* border-bottom: 1px solid #CCCCCC !important;  */
 
   }
+
+  .works-links::-webkit-scrollbar {
+    width: 0; /* عرض رفيع */
+    height: 100%; /* طول الاسكرول بار */
+}
+
+.works-links::-webkit-scrollbar-thumb {
+    background-color: #0b6ef8; /* اللون الأزرق */
+    border-radius: 10px; /* لو حبيت تخلي الحواف مدورة */
+}
+
+.works-links::-webkit-scrollbar-track {
+    background-color: #e5e7eb; /* اللون الرمادي */
+}
+
 
   .work-link {
     text-decoration: none;
@@ -692,13 +766,15 @@ nav.sticky .butn1:hover {
 /* /////////////////////////////////////////////////////////// */
 .testemonials {
     width: 100%;
-    height: auto;
-    position: relative;
+    height: auto !important;
+    padding-bottom: 250px !important;
+    /* overflow: scroll; */
+    overflow: auto !important;
+    
 }
 
 .teste-main {
     margin-top: 80px !important;
-    position: relative;
 }
 
 .teste-data img {
@@ -737,7 +813,7 @@ nav.sticky .butn1:hover {
     background-color:transparent !important;
     border: 3px solid #868F98 !important; 
     border-radius: 50%;
-    transition: transform 0.3s ease;
+    /* transition: transform 0.3s ease; */
   }
   .DotButtons_teste .circleSliderButton .fa-arrow-left,
   .DotButtons_teste .circleSliderButton .fa-arrow-right{
@@ -748,14 +824,22 @@ nav.sticky .butn1:hover {
 
   .swaped_images {
     position: relative;
-    display: flex;
+    display: flex !;
     justify-content: center;
+    align-items: center;
 }
 
+
+
+/* .TestetextPart{
+    order: 2;
+} */
+
 .image-stack {
-    position: relative;
+    position: absolute;
     width: 100%;
     max-width: 380px;
+    /* order: 1; */
 }
 
 .image-stack img {
@@ -766,70 +850,50 @@ nav.sticky .butn1:hover {
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
+    filter: grayscale(0)
 
 }
-.image-stack img.active {
-   
-    border: 1px solid #fff !important; 
 
-}
 
 .img-1 {
-    top: 0;
+    /* top: 0; */
     transform: rotate(0deg);
     z-index: 3;
+    border: 1px solid #fff;
 }
 
 .img-2 {
-    top: 20px;
+    /* top: 20px; */
     transform: rotate(5deg);
     z-index: 2;
+    filter: grayscale(100%) !important; /* يجعل الصورة باهتة بنسبة 50% */
+
 }
 
 .img-3 {
-    top: 40px;
+    /* top: 40px; */
     transform: rotate(10deg);
     z-index: 1;
+    filter: grayscale(100%) !important; /* يجعل الصورة باهتة بنسبة 50% */
+
 }
 
+.image-stack img.move-right {
+    transition: transform 1s ease-in-out;
+    transform: translateX(200px); /* Moves the image 200px to the right */
+}
+
+/* .image-stack img.move-left {
+    transition: transform 1s ease-in-out;
+    transform: translateX(-200px); 
+} */
 
 /* /////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////// */
 
-.FAQS {
-    width: 100%;
-    height: auto;
-    position: relative;
-    /* margin-top: 80px !important; */
-    background-color: transparent;
-    background: url("../images/6.webp") no-repeat center;
-    background-size: cover;
-}
 
-.FAQS .card {
-    background-color: transparent;
-    border-radius: 0px;
-    border-left: 5px solid #f15063 !important;
-}
-
-.faqs-span {
-    font-family: 'Stylish', sans-serif;
-    font-size: 22px;
-    color: #f15063;
-}
-
-.rotate-icon {
-    font-size: 22px;
-    color: #f15063;
-}
-
-.faqs-p {
-    font-family: 'Gaegu', cursive;
-    font-size: 19px;
-    color: #888
-}
 
 /* /////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////// */
@@ -838,8 +902,8 @@ nav.sticky .butn1:hover {
 
 footer {
     width: 100%;
-    height: auto;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    height: auto !important;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
 }
 
 .footer-brand {
@@ -877,24 +941,20 @@ footer p {
     padding-bottom: 5px;
 }
 
-.nav-list li a:hover:before {
+.nav-list li a:hover {
     margin-left: 0;
     opacity: 1;
     visibility: visible;
+    color: #c376df !important;
 }
 
-.contact_data dt,
-.contact_data dd {
-    color: #f0d9dc !important;
 
-}
 
 
 ul,
 ol {
     list-style: none;
-    padding: 0;
-    margin: 0;
+
 }
 
 
@@ -902,6 +962,75 @@ ol {
     font-size: 25px;
 
 }
+
+.footerSocialIcon{
+    width: 50px;
+    height: 50px;
+    background-color: #282828;
+    margin-left:25px;
+    overflow: hidden;
+
+}
+
+.fa-instagram,
+.fa-whatsapp,
+.fa-facebook,
+.fa-tiktok{
+    font-size: 25px;
+
+}
+
+.footerSocialIcon .MediaIcon {
+    transition:opacity 0.3s ease-in !important;
+    display: inline-block;
+}
+
+.footerSocialIcon .MediaIcon2 {
+    transition:transform 0.3s ease-in !important;
+    display: inline-block;
+}
+
+.footerSocialIcon .MediaIcon2 {
+    transform: translateY(-100px) !important;
+}
+.footerSocialIcon:hover .MediaIcon {
+    visibility: hidden;
+}
+.footerSocialIcon:hover .MediaIcon2 {
+    transform: translateY(-45px) !important; 
+}
+
+
+
+/* الألوان الخاصة بخلفية البوكس حسب المنصة */
+.footerSocialIcon.instagram:hover   {
+    background-color: #E4405F; /* لون إنستجرام */
+}
+
+.footerSocialIcon.whatsapp:hover   {
+    background-color: #25D366; /* لون واتساب */
+}
+
+.footerSocialIcon.facebook:hover   {
+    background-color: #3b5998; /* لون فيسبوك */
+}
+
+.footerSocialIcon.tiktok:hover   {
+    background-color: #010101; /* لون تيك توك */
+}
+
+.footerSocialIcon .MediaIcon {
+    color: white;
+    font-size: 20px;
+    line-height: 40px; /* يجعل الأيقونة في الوسط عموديًا */
+}
+
+.footerSocialIcon .MediaIcon2 {
+    color: white;
+    font-size: 20px;
+    line-height: 40px; /* يجعل الأيقونة في الوسط عموديًا */
+}
+
 
 .footerinput {
     width: 75%;
@@ -918,14 +1047,6 @@ ol {
     color: #f0d9dc;
 }
 
-.butn5 {
-    width: 60px;
-    height: 50px;
-    background-color: transparent;
-    margin-left: -5px;
-    border-radius: 2px;
-    border: 1px solid #EFAEB6;
-}
 
 /* todo  /////////////////////////////////////////////////////////  other pages  /////////////////////////////////////////////////////////////////////////// */
 /* todo  /////////////////////////////////////////////////////////  other pages  /////////////////////////////////////////////////////////////////////////// */
@@ -1095,11 +1216,11 @@ ol {
     .sectiontitle h1{
         font-size: 40px !important;
     }
-    .works-links{
-        /* overflow: scroll; */
-        /* overflow-y: hidden;
-        overflow-x: scroll; */
-    }
+    /* .works-links{
+        overflow: scroll;
+        overflow-y: hidden;
+        overflow-x: scroll;
+    } */
     .work-link{
         font-size: 18px;
     }
@@ -1120,6 +1241,65 @@ ol {
     .mobileScreen{
         display:block !important;
     }
+
+    .artisit-person{
+        width: 55%;
+        margin: 0 auto !important;
+    }
+    .testemonials {
+        width: 100%;
+        height: 1200px !important;
+        position: relative;
+        /* direction: rtl !important ; */
+    }
+    .teste-inner h2 {
+        font-size: 28px !important;
+        /* font-family: 'Gaegu', cursive; */
+        color: #B663D4;
+    }
+   
+
+    .teste-person h5{
+        font-size: 17px !important;
+        color: #CCCCCC;
+    }
+    
+    .teste-person h6{
+        font-size: 15px !important;
+        color: #7A7A7A;
+    }
+    
+    .DotButtons_teste .circleSliderButton{
+        position: absolute;
+    }
+      .DotButtons_teste .circleSlider-prev{
+        top: 45%;
+        left: -20px;
+    }
+      .DotButtons_teste .circleSlider{
+        top: 45%;
+        right: -20px;
+    
+    }
+
+    /* .swaped_images {
+        order: 1;
+        padding: 50px;
+    }
+    .TestetextPart {
+        order: 2;
+    } */
+    .swaped_images img{
+        width: 80%;
+        /* margin-right: auto; */
+    }
+
+    /* footer{
+        margin-top: 500px;
+    } */
+    
+      
+   
 
     /* ? ///////////////////////////////////// */
     .signupSection {
